@@ -13,11 +13,7 @@ const Checkbox = ({ checked = false, onChange, label }: CheckboxProps) => {
 
   return (
     <div className={styles.container} onClick={toggleCheckbox}>
-      {label && (
-        <label htmlFor={label} className={styles.label}>
-          {label}
-        </label>
-      )}
+      {label && <span className={styles.label}>{label}</span>}
       <div className={styles.wrapper}>
         <div className={`${styles.box} ${checked ? styles.checked : ""}`}>
           <div
